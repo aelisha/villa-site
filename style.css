@@ -63,6 +63,7 @@ body {
   background-color: #f35525;
   cursor: pointer;
 }
+
 header {
   width: 100%;
   top: 0;
@@ -73,7 +74,34 @@ header {
   background-color: #ffffff;
 }
 
-nav ul {
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+nav h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60px;
+}
+
+nav .menu-trigger {
+  display: block;
+  background: #f35525;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 1px 11px;
+}
+
+nav ul.menu {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -106,16 +134,6 @@ nav li a:hover {
   color: #f35525;
 }
 
-nav h2 {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 80px;
-  padding-right: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 nav button {
   height: 40px;
   margin: 3.5vh 3vh;
@@ -129,6 +147,9 @@ nav button {
   border-radius: 20px;
   padding-left: 0px;
   border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
 }
 
 nav button i {
@@ -141,20 +162,12 @@ nav button i {
   border-radius: 50%;
   margin-left: -2.5px;
 }
-
-nav button {
-  display: flex;
-  align-items: center;
-}
-
-nav button:hover {
-  color: #f35525;
-}
-
 nav button .fa-calendar {
   line-height: 3;
 }
-
+nav button:hover {
+  color: #ee626b;
+}
 #home {
   height: auto;
   width: 100%;
@@ -167,22 +180,25 @@ nav button .fa-calendar {
   height: 90vh;
   width: 100%;
   object-fit: cover;
-  opacity: 0.9;
 }
 
-.home button {
+.home .btn {
   position: absolute;
   top: 22%;
   left: 10%;
   background-color: #ffffff;
   color: #1e1e1e;
   border: none;
-  padding: 10px 20px;
+  padding: 6px 15px;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-bottom: 30px;
 }
 
-.home button span {
+.home .btn span {
   color: #f35525;
 }
 
@@ -191,54 +207,9 @@ nav button .fa-calendar {
   top: 30%;
   left: 10%;
   color: white;
-  font-size: 58px;
+  font-size: 62px;
   font-weight: 700;
-  line-height: 1.2;
-}
-
-.home .owl-prev,
-.owl-next {
-  position: absolute;
-
-  border: none !important;
-
-  cursor: pointer;
-  z-index: 2;
-  outline: none !important;
-}
-
-.home .fa-caret-left:before {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 24px;
-  display: inline-block;
-  color: #fff;
-  background-color: #0e0d0d33;
-  border-radius: 50%;
-  opacity: 1;
-  transition: all 0.3s;
-}
-.home .fa-caret-right:before {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  font-size: 24px;
-  display: inline-block;
-  color: #fff;
-  background-color: #0e0d0d33;
-  border-radius: 50%;
-  opacity: 1;
-  transition: all 0.3s;
-}
-
-.home .owl-prev {
-  left: 60px;
-  top: 280px;
-}
-.home .owl-next {
-  right: -1070px;
-  top: 280px;
+  line-height: 72px;
 }
 
 #view {
@@ -280,7 +251,7 @@ nav button .fa-calendar {
 
 .col-lg-5 {
   height: auto;
-  padding: 10px;
+  padding: 40px;
 }
 
 #view .section-heading {
@@ -291,14 +262,16 @@ nav button .fa-calendar {
 
 #view .section-heading h6 {
   color: #f35525;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .col-lg-5 .section-heading h2 {
   font-size: 40px;
-  font-weight: 600;
+  font-weight: 700;
+  margin-top: 20px;
+  line-height: 56px;
 }
 
 .box {
@@ -356,6 +329,7 @@ li {
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
   padding: 25px 35px;
+  margin-left: 55px;
 }
 .col-lg-3 .table ul li {
   display: block;
@@ -373,7 +347,7 @@ li {
   margin-right: 25px;
 }
 .col-lg-3 .table h4 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
 }
 .col-lg-3 .table span {
@@ -459,7 +433,7 @@ li {
   margin-right: 25px;
   font-size: 40px;
   color: #f35525;
-  font-weight: 900;
+  font-weight: 700;
 }
 .facts .counter p {
   text-align: center;
@@ -542,11 +516,12 @@ li {
   padding: 0px 25px;
   color: #fff;
   border: none;
+  outline: none;
 }
 .section-deal .info-table {
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
-  padding: 35px 30px;
+  padding: 28px 15px;
 }
 .section-deal .info-table ul li {
   display: block;
@@ -566,6 +541,15 @@ li {
   color: #1e1e1e;
   font-weight: 700;
   float: right;
+}
+.section-deal img {
+  padding: 0px 45px;
+}
+.section-deal .col-lg-4 {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .section-deal .col-lg-4 h4 {
   font-size: 17px;
@@ -639,11 +623,11 @@ li {
 .properties-details .item {
   background-color: #fafafa;
   border-radius: 10px;
-  padding: 30px;
+  padding: 3px;
   margin-bottom: 30px;
   margin-top: 50px;
-  width: 20vw;
-  height: 85vh;
+  width: 23vw;
+  height: auto;
 }
 .properties-details .item img {
   border-radius: 10px;
@@ -663,7 +647,7 @@ li {
   font-size: 20px;
   color: #f35525;
   margin-top: 6px;
-  display: block;
+  display: inline-block;
   float: right;
   margin-top: 30px;
   font-weight: 700;
@@ -681,6 +665,7 @@ li {
   border-bottom: 1px solid #eaeaea;
   margin-bottom: 30px;
   padding-bottom: 30px;
+  padding-left: 0px;
 }
 
 .properties-details .item li {
@@ -705,6 +690,7 @@ li {
   height: 40px;
   line-height: 40px;
   padding: 0px 30px;
+  margin-bottom: 30px;
   border-radius: 25px;
   transition: all 0.3s;
 }
@@ -847,109 +833,115 @@ footer p {
 /* Media Queries */
 
 /* icons */
+
 @media screen and (max-width: 991px) {
+  .above,
+  .left p,
+  .right i,
+  .left i,
+  .line {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
   .above {
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 18px;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-    justify-content: center;
-    padding: 10px 0;
-  }
-
-  .right {
-    padding: 10px 0;
+    height: auto;
+    padding: 10px 20px;
   }
 
   .left p,
   .right i {
     font-size: 12px;
-    padding: 0.5vw;
-  }
-  .right i {
-    text-align: center;
-  }
-  .left i {
     padding: 1vw;
+  }
+
+  .left i {
+    padding: 1.2vw;
+  }
+
+  .right i {
+    margin-right: 1vw;
+    line-height: 10px;
   }
 
   .line {
     padding-right: 1vw;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .above {
-    height: auto;
-    padding: 5px 10px;
-  }
-
-  .left p,
-  .right i {
-    font-size: 10px;
-    padding: 0.5vw;
-  }
-
-  .left i {
-    padding: 0.8vw;
-  }
-
-  .right i {
-    margin-right: 0.5vw;
-  }
-
-  .line {
-    padding-right: 0.5vw;
-    height: 15px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .left p,
-  .right i {
-    font-size: 6px;
-    padding: 0.3vw;
-  }
-
-  .left i {
-    padding: 0.5vw;
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
-
-  .right i {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    font-size: 12px;
-    margin-right: 0.3vw;
-  }
-
-  .line {
-    padding-right: 0.3vw;
-    height: 10px;
+    height: 20px;
   }
 }
 
 /* header and home */
+@media (max-width: 768px) {
+  nav .menu-trigger {
+    display: block;
+  }
+
+  nav ul.menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    z-index: 1000;
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.menu li {
+    margin: 1vh 0;
+  }
+
+  nav ul.menu li a {
+    line-height: 30px;
+    color: #484545;
+  }
+
+  nav ul.menu button {
+    margin: 2vh auto;
+  }
+
+  nav ul.menu.open {
+    display: flex;
+  }
+}
+
+@media (min-width: 769px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  nav .menu-trigger {
+    display: none;
+  }
+
+  nav ul.menu {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+  }
+
+  nav ul.menu li {
+    margin: 0 20px;
+  }
+
+  nav ul.menu li a {
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  nav ul.menu button {
+    height: 40px;
+    margin: 0 20px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
-  nav h2 {
-    padding-right: 55px;
-    font-size: 24px;
-    margin: -14px;
-  }
-
-  nav li {
-    margin: 2vh 4vh;
-  }
   .home img {
-    height: auto;
+    height: 60vh;
   }
   .home h1 {
     font-size: 48px;
@@ -957,16 +949,6 @@ footer p {
 
   .home button {
     font-size: 14px;
-  }
-  .home .owl-prev {
-    left: 10px;
-    top: 250px;
-  }
-  .home .owl-next {
-    right: -225px;
-    top: 250px;
-    width: fit-content;
-    margin-left: 602px;
   }
 
   #view {
@@ -1007,27 +989,12 @@ footer p {
   .home img {
     height: 95vh;
   }
-  .home .owl-prev {
-    left: 10px;
-    top: 280px;
-  }
-  .home .owl-next {
-    right: -105px;
-    top: 280px;
-    width: fit-content;
-    margin-left: 270px;
+  .col-lg-3 .table {
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 320px) {
-  nav li {
-    margin: 1vh 2vh;
-  }
-
-  nav button {
-    font-size: 12px;
-    margin: 2vh 1.5vh;
-  }
   .home img {
     height: 90vh;
   }
@@ -1038,16 +1005,7 @@ footer p {
   .home button {
     font-size: 12px;
   }
-  .home .owl-prev {
-    left: 10px;
-    top: 280px;
-  }
-  .home .owl-next {
-    right: -105px;
-    top: 280px;
-    width: fit-content;
-    margin-left: 202px;
-  }
+
   #view .section-heading h6 {
     margin-top: 30px;
   }
@@ -1106,11 +1064,11 @@ footer p {
   }
 
   .facts .counter h2 {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .facts .counter p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -1255,6 +1213,9 @@ footer p {
 
 /* deal */
 @media screen and (max-width: 991px) {
+  .section-deal .heading {
+    text-align: center;
+  }
   .section-deal .row {
     flex-wrap: wrap;
   }
@@ -1311,6 +1272,7 @@ footer p {
 
   .section-deal .col-lg-6 img {
     width: 100%;
+    padding: 0;
   }
 
   .section-deal .col-lg-4 button {
@@ -1319,27 +1281,56 @@ footer p {
 }
 
 @media screen and (max-width: 575px) {
-  .section-deal .heading h2 {
-    font-size: 26px;
-    line-height: 1.4;
+  .section-deal .nav-item {
+    margin-right: 15px;
   }
-
+  .section-deal .heading h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 56px;
+  }
+  .section-deal .info-table {
+    width: 110%;
+  }
   .section-deal .nav-tabs li {
     margin-left: -3px;
   }
-
+  .section-deal .col-lg-4 {
+    margin-left: 10px;
+  }
   .section-deal .col-lg-4 h4 {
     font-size: 20px;
   }
   .section-deal .col-lg-4 button {
-    margin-left: 60px;
+    margin-left: 76px;
   }
 }
 /* contact section */
+@media screen and (max-width: 992px) {
+  .content .form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .content .form label {
+    font-size: 13px;
+  }
+
+  .content .form input,
+  .content .form textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .content .form button {
+    font-size: 13px;
+    padding: 0px 10px;
+  }
+}
 @media screen and (max-width: 767px) {
   .content .form {
-    width: 90%;
-    margin-left: 5%;
+    width: 126%;
+    margin-left: -6%;
     padding: 10px;
   }
 
@@ -1360,6 +1351,9 @@ footer p {
 }
 
 @media screen and (max-width: 320px) {
+  .content .item {
+    margin-bottom: 20px;
+  }
   .content .form {
     width: 95%;
     margin-left: 2.5%;
@@ -1381,3 +1375,5 @@ footer p {
     padding: 0px 5px;
   }
 }
+
+

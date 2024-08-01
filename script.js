@@ -1,16 +1,67 @@
+function menu() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuTrigger = document.querySelector(".menu-trigger");
+    const menu = document.querySelector(".menu");
+    const menuItems = document.querySelectorAll(".menu li a");
+
+    menuTrigger.addEventListener("click", function () {
+      menu.classList.toggle("open");
+    });
+
+    menuItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        menu.classList.remove("open");
+      });
+    });
+  });
+}
+menu();
+
+function deal() {
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".nav-item");
+    const infos = document.querySelectorAll(".property-info");
+    const images = document.querySelectorAll(".property-img");
+    const extras = document.querySelectorAll(".property-extra");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const target = button.getAttribute("data-target");
+
+        // Remove active class
+        buttons.forEach((btn) => btn.classList.remove("nav-active"));
+        // Add active class
+        button.classList.add("nav-active");
+
+        // Hide all property
+        infos.forEach((info) => (info.style.display = "none"));
+        images.forEach((img) => (img.style.display = "none"));
+        extras.forEach((extra) => (extra.style.display = "none"));
+
+        // Show the targeted property
+        document.getElementById(`${target}-info`).style.display = "block";
+        document.getElementById(`${target}-img`).style.display = "block";
+        document.getElementById(`${target}-extra`).style.display = "block";
+      });
+    });
+
+    // Initialize default active content
+    document.getElementById("apartment-info").style.display = "block";
+    document.getElementById("apartment-img").style.display = "block";
+    document.getElementById("apartment-extra").style.display = "block";
+  });
+}
+deal();
+
+// sliders
 $(document).ready(function () {
   $(".home").owlCarousel({
     stagePadding: 10,
     items: 1,
     loop: true,
     margin: 10,
-    nav: true,
     autoplay: true,
     autoplayTimeout: 3000,
-    navText: [
-      "<i class='fa fa-caret-left'></i>",
-      "<i class='fa fa-caret-right'></i>",
-    ],
   });
 
   $(document).ready(function () {

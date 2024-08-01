@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      @import url("https://fonts.googleapis.com/css?family=Poppins:400,700,900");
+      @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
     </style>
     <link
       rel="stylesheet"
@@ -43,18 +43,23 @@
         <i class="fab fa-instagram"></i>
       </div>
     </div>
+
     <header>
-      <nav>
-        <ul>
+      <div class="container">
+        <nav>
           <h2>VILLA</h2>
-          <li><a href="#home" class="color">Home</a></li>
-          <li><a href="#properties">Properties</a></li>
-          <li><a href="#properties-details">Property Details</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <button><i class="fa fa-calendar"></i>Schedule a visit</button>
-        </ul>
-      </nav>
+          <button class="menu-trigger">☰</button>
+          <ul class="menu">
+            <li><a href="#home" class="color">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#properties-details">Property Details</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <button><i class="fa fa-calendar"></i>Schedule a visit</button>
+          </ul>
+        </nav>
+      </div>
     </header>
+
     <section id="home">
       <div class="home owl-carousel">
         <div>
@@ -62,12 +67,11 @@
             src="https://images.pexels.com/photos/7174398/pexels-photo-7174398.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt=""
           />
-          <button>Toronto,<span>Canada</span></button>
+          <button class="btn">Toronto,<span>Canada</span></button>
           <h1>
             HURRY! <br />
             GET THE BEST <br />
-            VILLA FOR <br />
-            YOU
+            VILLA FOR YOU
           </h1>
         </div>
         <div>
@@ -75,11 +79,12 @@
             src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/banner-03.jpg"
             alt=""
           />
-          <button>Melbourne,<span>Australia</span></button>
+          <button class="btn">Melbourne,<span>Australia</span></button>
           <h1>
             BE QUICK! <br />
             GET THE BEST <br />
-            VILLA IN TOWN
+            VILLA IN <br />
+            TOWN
           </h1>
         </div>
         <div>
@@ -87,131 +92,136 @@
             src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/banner-02.jpg"
             alt=""
           />
-          <button>Miami,<span>South Florida</span></button>
+          <button class="btn">Miami,<span>South Florida</span></button>
           <h1>
             ACT NOW! <br />
-            GET THE HIGHEST <br />
-            LEVEL PENTHOUSE
+            GET THE <br />
+            HIGHEST <br />
+            LEVEL <br />
+            PENTHOUSE
           </h1>
         </div>
       </div>
     </section>
 
     <section id="properties">
-      <div id="view">
-        <div class="col-lg-4">
-          <div class="left-image">
-            <img
-              src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/featured.jpg"
-              alt=""
-            />
-            <a href="">
+      <div class="container">
+        <div id="view">
+          <div class="col-lg-4">
+            <div class="left-image">
               <img
-                src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/featured-icon.png"
+                src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/featured.jpg"
                 alt=""
               />
-            </a>
+              <a href="">
+                <img
+                  src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/featured-icon.png"
+                  alt=""
+                />
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="section-heading">
-            <h6>| Featured</h6>
-            <h2>Best Appartment <br />& Sea view</h2>
-          </div>
-          <div class="box">
-            <input
-              type="radio"
-              id="toggle-1"
-              name="toggle"
-              class="toggle-input"
-            />
-            <label for="toggle-1" class="toggle-label"
-              >Best useful links?</label
-            >
-            <div class="toggle-content">
-              Get <strong>the best villa </strong> website template in HTML CSS
-              and Bootstrap for your business. TemplateMo provides you the
-              <a href="https://www.google.com/search?q=best+free+css+templates"
-                >best free CSS templates</a
+          <div class="col-lg-5">
+            <div class="section-heading">
+              <h6>| Featured</h6>
+              <h2>Best Appartment <br />& Sea view</h2>
+            </div>
+            <div class="box">
+              <input
+                type="radio"
+                id="toggle-1"
+                name="toggle"
+                class="toggle-input"
+              />
+              <label for="toggle-1" class="toggle-label"
+                >Best useful links?</label
               >
-              in the world. Please tell your friends about it.
-            </div>
+              <div class="toggle-content">
+                Get <strong>the best villa </strong> website template in HTML
+                CSS and Bootstrap for your business. TemplateMo provides you the
+                <a
+                  href="https://www.google.com/search?q=best+free+css+templates"
+                  >best free CSS templates</a
+                >
+                in the world. Please tell your friends about it.
+              </div>
 
-            <input
-              type="radio"
-              id="toggle-2"
-              name="toggle"
-              class="toggle-input"
-            />
-            <label for="toggle-2" class="toggle-label"
-              >How does this work?</label
-            >
-            <div class="toggle-content">
-              Dolor <strong>almesit amet</strong>, consectetur adipiscing elit,
-              sed doesn't eiusmod tempor incididunt ut labore consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
-            </div>
+              <input
+                type="radio"
+                id="toggle-2"
+                name="toggle"
+                class="toggle-input"
+              />
+              <label for="toggle-2" class="toggle-label"
+                >How does this work?</label
+              >
+              <div class="toggle-content">
+                Dolor <strong>almesit amet</strong>, consectetur adipiscing
+                elit, sed doesn't eiusmod tempor incididunt ut labore
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.
+              </div>
 
-            <input
-              type="radio"
-              id="toggle-3"
-              name="toggle"
-              class="toggle-input"
-            />
-            <label for="toggle-3" class="toggle-label"
-              >Why is villa Agency the best?</label
-            >
-            <div class="toggle-content">
-              Dolor <strong>almesit amet</strong>, consectetur adipiscing elit,
-              sed doesn't eiusmod tempor incididunt ut labore consectetur
-              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua.
+              <input
+                type="radio"
+                id="toggle-3"
+                name="toggle"
+                class="toggle-input"
+              />
+              <label for="toggle-3" class="toggle-label"
+                >Why is villa Agency the best?</label
+              >
+              <div class="toggle-content">
+                Dolor <strong>almesit amet</strong>, consectetur adipiscing
+                elit, sed doesn't eiusmod tempor incididunt ut labore
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="table">
-            <ul>
-              <li>
-                <img
-                  src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-01.png"
-                  alt=""
-                />
-                <h4>250 m2<br /><span>Total Flat Space</span></h4>
-              </li>
-              <li>
-                <img
-                  src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-02.png"
-                  alt=""
-                />
-                <h4>Contract<br /><span>Contract Ready</span></h4>
-              </li>
-              <li>
-                <img
-                  src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-03.png"
-                  alt=""
-                />
-                <h4>Payment<br /><span>Payment Process</span></h4>
-              </li>
-              <li>
-                <img
-                  src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-04.png"
-                  alt=""
-                />
-                <h4>Safety<br /><span>24/7 Under Control</span></h4>
-              </li>
-            </ul>
+          <div class="col-lg-3">
+            <div class="table">
+              <ul>
+                <li>
+                  <img
+                    src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-01.png"
+                    alt=""
+                  />
+                  <h4>250 m2<br /><span>Total Flat Space</span></h4>
+                </li>
+                <li>
+                  <img
+                    src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-02.png"
+                    alt=""
+                  />
+                  <h4>Contract<br /><span>Contract Ready</span></h4>
+                </li>
+                <li>
+                  <img
+                    src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-03.png"
+                    alt=""
+                  />
+                  <h4>Payment<br /><span>Payment Process</span></h4>
+                </li>
+                <li>
+                  <img
+                    src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/info-icon-04.png"
+                    alt=""
+                  />
+                  <h4>Safety<br /><span>24/7 Under Control</span></h4>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div class="video-part">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 offset-lg-4">
+            <div class="col-lg-5 offset-lg-4">
               <div class="section-heading text-center">
                 <h6>| Video View</h6>
-                <h2>Get Closer View & Different Feeling</h2>
+                <h2>Get Closer View & <br />Different Feeling</h2>
               </div>
             </div>
           </div>
@@ -286,13 +296,19 @@
             <div class="col-lg-6">
               <ul class="nav-tabs">
                 <li>
-                  <button class="nav-active">Apartment</button>
+                  <button class="nav-item nav-active" data-target="apartment">
+                    Apartment
+                  </button>
                 </li>
                 <li>
-                  <button class="nav-item">Villa House</button>
+                  <button class="nav-item" data-target="villa">
+                    Villa House
+                  </button>
                 </li>
                 <li>
-                  <button class="nav-item">Penthouse</button>
+                  <button class="nav-item" data-target="penthouse">
+                    Penthouse
+                  </button>
                 </li>
               </ul>
             </div>
@@ -300,13 +316,34 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="info-table">
-                <ul>
+                <ul id="apartment-info" class="property-info">
                   <li>
-                    Total Flat Space
-                    <span>185 m<sup>2</sup></span>
+                    Total Flat Space <span>185 m<sup>2</sup></span>
                   </li>
                   <li>Floor number <span>26th</span></li>
                   <li>Number of rooms <span>4</span></li>
+                  <li>Parking Available <span>Yes</span></li>
+                  <li>Payment Process <span>Bank</span></li>
+                </ul>
+                <ul id="villa-info" class="property-info" style="display: none">
+                  <li>
+                    Total Villa Space <span>350 m<sup>2</sup></span>
+                  </li>
+                  <li>Floor number <span>2</span></li>
+                  <li>Number of rooms <span>6</span></li>
+                  <li>Parking Available <span>Yes</span></li>
+                  <li>Payment Process <span>Cash</span></li>
+                </ul>
+                <ul
+                  id="penthouse-info"
+                  class="property-info"
+                  style="display: none"
+                >
+                  <li>
+                    Total flat Space <span>500 m<sup>2</sup></span>
+                  </li>
+                  <li>Floor number <span>35th</span></li>
+                  <li>Number of rooms <span>8</span></li>
                   <li>Parking Available <span>Yes</span></li>
                   <li>Payment Process <span>Bank</span></li>
                 </ul>
@@ -314,21 +351,68 @@
             </div>
             <div class="col-lg-6">
               <img
+                id="apartment-img"
+                class="property-img"
                 src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/deal-01.jpg"
-                alt=""
+                alt="Apartment"
+              />
+              <img
+                id="villa-img"
+                class="property-img"
+                src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/deal-02.jpg"
+                alt="Villa House"
+                style="display: none"
+              />
+              <img
+                id="penthouse-img"
+                class="property-img"
+                src="https://templatemo.com/templates/templatemo_591_villa_agency/assets/images/deal-03.jpg"
+                alt="Penthouse"
+                style="display: none"
               />
             </div>
             <div class="col-lg-4">
-              <h4>Extra Info About Property</h4>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error,
-                autem! Lorem ipsum dolor sit amet.
-                <br /><br />
-                When you need free CSS templates, you can simply type TemplateMo
-                in any search engine website. In addition, you can type
-                TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
-              </p>
-              <button><i class="fa fa-calendar"></i>Schedule a visit</button>
+              <div id="apartment-extra" class="property-extra">
+                <h4>Extra Info About Property</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Error, autem! Lorem ipsum dolor sit amet. <br /><br />
+                  When you need free CSS templates, you can simply type
+                  TemplateMo in any search engine website. In addition, you can
+                  type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
+                </p>
+                <button><i class="fa fa-calendar"></i>Schedule a visit</button>
+              </div>
+              <div
+                id="villa-extra"
+                class="property-extra"
+                style="display: none"
+              >
+                <h4>Detail Info About Villa</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Error, autem! Lorem ipsum dolor sit amet. <br /><br />
+                  When you need free CSS templates, you can simply type
+                  TemplateMo in any search engine website. In addition, you can
+                  type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
+                </p>
+                <button><i class="fa fa-calendar"></i>Schedule a visit</button>
+              </div>
+              <div
+                id="penthouse-extra"
+                class="property-extra"
+                style="display: none"
+              >
+                <h4>Extra Info About Penthouse</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Error, autem! Lorem ipsum dolor sit amet. <br /><br />
+                  When you need free CSS templates, you can simply type
+                  TemplateMo in any search engine website. In addition, you can
+                  type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
+                </p>
+                <button><i class="fa fa-calendar"></i>Schedule a visit</button>
+              </div>
             </div>
           </div>
         </div>
@@ -338,10 +422,13 @@
       <div class="properties-details">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 offset-lg-4">
+            <div class="col-lg- offset-lg-4">
               <div class="heading">
                 <h6>| Properties</h6>
-                <h2>We Provide The Best Property You Like</h2>
+                <h2>
+                  We Provide The Best <br />
+                  Property You Like
+                </h2>
               </div>
             </div>
           </div>
@@ -579,10 +666,10 @@
       <div class="contact-section">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 offset-lg-4">
+            <div class="col-lg- offset-lg-4">
               <div class="heading text-center">
                 <h6>| Contact Us</h6>
-                <h2>Get In Touch With Our Agents</h2>
+                <h2>Get In Touch With <br />Our Agents</h2>
               </div>
             </div>
           </div>
@@ -694,3 +781,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
